@@ -8,5 +8,5 @@ console.log(5*2);
 
 //Zadanie 3
 console.log("Hello World");
-console.log(Hello World);
-console.log("Hello World);
+console.log(Hello World); //brak cudzyslowow wiec wyrzuca blad
+console.log("Hello World); //brak prawego cudzyslowa wiec wyrzuca blad
