@@ -93,7 +93,26 @@ for (var i=0; i<5; i++) {
 //Zadanie 8c
 
 
+let star="*";
+let space=" ";
+var j=5;
+var l=1;
+for(var i=0; i<5; i++){
 
+result1="";
+result2="*";
+
+  for(var k=j; k>0; k--){
+   result1+=space;
+}
+j--;
+for(var n=1; n<l; n++){
+result2+=(star+star);
+}
+l++;
+console.log(result1+result2);
+
+}
 
 
 
