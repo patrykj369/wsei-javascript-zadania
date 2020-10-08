@@ -95,7 +95,7 @@ for (var i=0; i<5; i++) {
 
 let star="*";
 let space=" ";
-var j=5;
+var j=4;
 var l=1;
 for(var i=0; i<5; i++){
 
