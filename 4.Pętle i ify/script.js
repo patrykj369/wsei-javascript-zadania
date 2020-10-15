@@ -29,7 +29,7 @@ for (let i=0; i<11; i++) {
 
 //Zadanie 4
 let result = 0;
-for(int i=0; i>=10; i++){
+for(let i=0; i>=10; i++){
   result =+ i;
   console.log(result);
 }
