@@ -21,7 +21,7 @@ let myTimer = setTimeout(() => {
         if (j >= myArray.length) {
             clearInterval(myInterval);
         }
-    }, 3000)
+    }, 3000);
     
-}, 2000 )
+}, 2000);
     
