@@ -14,10 +14,10 @@ let myTimer = setTimeout(() => {
     for (let i=0; i < myArray.length; i++) {
         console.log (myArray[i]);
     }
-    let j = 0
+    let j = 0;
     let myInterval = setInterval(() => {
         console.log (myArray[j]);
-        j++
+        j++;
         if (j >= myArray.length) {
             clearInterval(myInterval);
         }
