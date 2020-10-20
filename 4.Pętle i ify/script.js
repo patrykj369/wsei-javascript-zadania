@@ -119,7 +119,7 @@ let star = "*";
 let result1 = "";
 let result2 = "";
 let l = 5;
-for (var i = 1; i <= 5; i++) {
+  for (var i = 1; i <= 5; i++) {
   result1+=star;
   let tmp = 1;
   for (var j = 1; j < l; j++) {
@@ -130,5 +130,20 @@ for (var i = 1; i <= 5; i++) {
   result2 = "";
   l--;
 }
+console.log("-----");
+var n = 5 ;
+var result3 = "";
+var result4 = "";
+for(var k=1; k<=5; k++){
+  for(var m=1;m<=n;m++){
+    result3+=star;
+  }
+  result3+=result4;
+  console.log(result3);
+  result4 = ((n-1)+result4);
+  result3 = "";
+  n--;
+}
+
 
 
