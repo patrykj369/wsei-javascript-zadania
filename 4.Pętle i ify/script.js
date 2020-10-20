@@ -145,5 +145,28 @@ for(var k=1; k<=5; k++){
   n--;
 }
 
-
+//Zadanie8e
+let space = " ";
+let star = "*";
+let result = "";
+let result2="";
+let tmp = 5;
+for(var i=0; i<5; i++){
+  
+  for(var j=0; j<tmp;j++){
+    result2+=space;
+  }
+  result+=(star+space);
+  console.log(result2+result);
+  result2="";
+  tmp--;
+}
+let result3="";
+for(var k=0; k<3;k++){
+  for(var l=0; l<5;l++){
+    result3+=space;
+  }
+  console.log(result3+"*");
+  result3="";
+}
 
