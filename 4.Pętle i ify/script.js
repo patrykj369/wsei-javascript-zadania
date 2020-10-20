@@ -114,5 +114,21 @@ console.log(result1+result2);
 
 }
 
+//Zadanie 8d
+let star = "*";
+let result1 = "";
+let result2 = "";
+let l = 5;
+for (var i = 1; i <= 5; i++) {
+  result1+=star;
+  let tmp = 1;
+  for (var j = 1; j < l; j++) {
+    result2+=tmp;
+    tmp++;
+  }
+  console.log(result1+result2);
+  result2 = "";
+  l--;
+}
 
 
