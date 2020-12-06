@@ -377,4 +377,31 @@ function averageNumbers(value){
     
 }
 
-averageNumbers(exampleArray)
+averageNumbers(exampleArray);
+
+//Zadanie 14
+let exampleObject = {
+    name: '',
+    surname: '',
+    age: ''
+}
+
+function changeObject(name, surname, age){
+    exampleObject.name = name;
+    exampleObject.surname = surname;
+    exampleObject.age = age;
+
+    if(name.length > 5 || surname.length > 5 || age.length > 5){
+        const button = document.createElement("button");
+        button.textContent = "Reset";
+        button.addEventListener("click", () => {
+            exampleObject.name = "";
+            exampleObject.surname = "";
+            exampleObject.age = "";
+        })
+        document.body.appendChild(button);
+    }
+}
+
+changeObject("Henio", "Gąbeczka", "14");
+
