@@ -77,3 +77,55 @@ function addAttributes(elements) {
 
 }
 const result = addAttributes(list);
+
+//Zadanie 8
+function createObject(name) {
+    return {newClass: name}
+}
+
+
+const addClass(obj) {
+    const newClass = obj.newClass;
+    document.querySelector("#myDiv").classList.add(newClass);
+
+}
+
+const sampleObj = createObject("string_z_parametru");
+addClass(sampleObj);
+
+//Zadanie 9 
+function addClassEvenOrOdd(number){
+    const newClass = "";
+    if(number % 2 === 0) {
+        newClass = "even";
+    } else {
+        newClass = "odd";
+    }
+    document.querySelector("#numbers").classList.add(newClass);
+}
+
+addClassEvenOrOdd(Math.floor(Math.random() * 10));
+
+//Zadanie 10
+const list = document.querySelector('#longList');
+
+function getList(elements) {
+    let text = [];
+    elements.querySelectorAll("li").forEach((element) => {
+        text.push(element.innerText);
+    });
+}
+
+console.log(getList(list));
+
+//Zadanie 11
+const list = document.querySelectorAll("#longList li");
+
+const changeDataAndSetValues(elements){
+    elements.forEach(   element => {
+        element.dataset.oldValue = element.innerHTML;
+        element.innerHTML = Math.floor(Math.random() * 10)
+    })
+}
+
+changeDataAndSetValues(list);
