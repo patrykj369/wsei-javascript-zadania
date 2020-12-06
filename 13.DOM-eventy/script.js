@@ -1,44 +1,44 @@
-/ zad 1
+//Zadanie 1
 
-//1.1
+//Pkt 1.1
 document.querySelector("#test-event").addEventListener("click", e => {
     console.log(e);
 });
 
-//1.2
+//Pkt 1.2
 document.addEventListener("mousemove", e => {
     console.log(e);
 })
 
-//1.3
+//Pkt 1.3
 document.querySelector("#test-event").addEventListener("mouseover", e => {
     console.log(e);
 });
 
-//1.4
+//Pkt 1.4
 document.addEventListener("keypress", e => {
     console.log(e);
 });
   
-//1.5
+//Pkt 1.5
 document.addEventListener("scroll", e => {
 console.log(e);
 });
   
-//1.6
+//Pkt 1.6
 document.querySelector("#input-test").addEventListener("input", e => {
 console.log(e);
 });
 
 
-// zad 2
+//Zadanie 2
 const span = document.querySelector("#span-ex2")
 
 document.querySelector("#ex2").addEventListener("click", e => {
     span.innerHTML = e.target.getAttribute("data-text");
 });
   
-// zad 3
+//Zadanie 3
 const redElement = document.querySelector("#ex3");
 
 redElement.addEventListener("mouseover", e => {
@@ -49,7 +49,7 @@ redElement.addEventListener("mouseout", e => {
     e.target.style.backgroundColor = "red";
 });
 
-// zad 4
+//Zadanie 4
 const errorSpan = document.querySelector("#ex3-err");
 
 document.querySelector("#input-test").addEventListener("input", e => {
@@ -67,7 +67,7 @@ document.querySelector("#input-test").addEventListener("input", e => {
     errorSpan.innerHTML = text;
 })
 
-// zad 5
+//Zadanie 5
 const button = document.querySelector("#ex5-button");
 const element = document.querySelector("#ex5");
 let counter = 0;
@@ -83,7 +83,7 @@ button.addEventListener("click", () => {
     }
 })
 
-// zad 6
+//Zadanie 6
 window.addEventListener("scroll", () => {
     if(window.scrollY > 200) {
         document.body.style.backgroundColor = "red";
@@ -93,7 +93,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-// zad 7
+//Zadanie 7
 const buttons = document.querySelectorAll("#calculator button");
 const input = document.querySelector("#calculator input");
 
