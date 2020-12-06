@@ -87,7 +87,34 @@ function myTable(paramTable){
 };
 myTable([1,2,3,4]);
 
-//8
+//Zadanie 6
+  
+  myTable([1,2,3,4]);
+
+function myTable(paramTable){
+    var sum =0;
+    var length = 0;
+    for (i=0; i<paramTable.length; i++){
+        if(paramTable[i] % 2 == 0){
+            
+            sum = sum + paramTable[i];
+            length++;
+        }
+            
+    }
+    let avg = sum / length;
+    console.log(avg)
+};
+
+//Zadanie 7
+
+const nums = [2, 7, 5, 34, 1, 65];
+function compareNumbers(a, b) {
+    return a - b;
+}
+console.log(nums.sort(compareNumbers));
+
+//Zadanie 8
 myTable([1,2,3,4]);
 
 function myTable(paramTable){
@@ -105,7 +132,7 @@ function myTable(paramTable){
     console.log(avg)
 };
 
-//9
+//Zadanie 9
 function reserveSing(paramTable)
 {
   return  paramTable.map(el => {
@@ -114,6 +141,12 @@ function reserveSing(paramTable)
 }
 console.log(reserveSing([1,2,3,4,6,-6]));
 
-//10
-
+//Zadanie 10
+function reserveSing(paramTable)
+{
+  return  paramTable.map(el => {
+    return el * (-1);
+  })
+}
+console.log(reserveSing([1,2,3,4,6,-6]));
 
