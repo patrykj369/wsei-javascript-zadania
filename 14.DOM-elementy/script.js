@@ -63,3 +63,17 @@ function displayClasses(classes) {
 }
 
 displayClasses(elements);
+
+//Zadanie 7
+const list = document.querySelectorAll('#longList > li')
+
+function addAttributes(elements) {
+
+    elements.forEach( element => {
+        if(!element.getAttribute("data-text")){
+            element.dataset.text = "text";
+        }
+    })
+
+}
+const result = addAttributes(list);
