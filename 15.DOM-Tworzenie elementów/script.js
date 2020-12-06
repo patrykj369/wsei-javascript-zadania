@@ -329,3 +329,52 @@ obj1.checkFunction = function() {
 }
 
 obj1.checkFunction();
+
+//Zadanie 13
+const exampleArray = ["plum1", "plim2"];
+
+function sumLettersInString(value){
+    let numbers = 0;
+
+    value.forEach(item => {
+        const textWithoutNumbers = item.replace(/\d+/g, "");
+        numbers += textWithoutNumbers.length;
+    })
+
+    console.log(numbers);
+}
+
+sumLettersInString(exampleArray);
+
+
+function sumNumbers(value){
+    let sum = 0;
+    value.forEach(item => {
+        item.match(/[0-9]+/g).forEach( number => {
+            sum+=(Number(number));
+        })
+        
+    })
+    console.log(sum);
+}
+
+sumNumbers(exampleArray)
+
+function averageNumbers(value){
+    let sum = 0;
+    let letters = 0;
+    value.forEach(item => {
+        item.match(/[0-9]+/g).forEach( number => {
+            sum+=(Number(number));
+            letters = number.length;
+        })
+        
+    })
+
+    const average = sum/letters;
+    console.log(average);
+    return average;
+    
+}
+
+averageNumbers(exampleArray)
