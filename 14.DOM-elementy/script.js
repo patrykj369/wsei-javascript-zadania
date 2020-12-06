@@ -27,7 +27,7 @@ function displayDetails(item) {
 displayDetails(shortList);
 
 //Zadanie 3
-const dataSetCheck = document.getElementById("datasetCheck")
+const dataSetCheck = document.getElementById("datasetCheck");
 
 function calculateParameters(el) {
     const data = document.querySelector("#datasetCheck");
@@ -36,11 +36,11 @@ function calculateParameters(el) {
     const elmentThree = Number(el.getAttribute("data-number-three"));
 
     const sum =  elmentOne + elmentTwo + elmentThree;
-    const diff = elmentOne - elmentTwo - elmentThree
+    const diff = elmentOne - elmentTwo - elmentThree;
     
 
-    console.log("suma: " + sum )
-    console.log("roznica: " + diff)
+    console.log("suma: " + sum );
+    console.log("roznica: " + diff);
 }
 
 calculateParameters(dataSetCheck);
