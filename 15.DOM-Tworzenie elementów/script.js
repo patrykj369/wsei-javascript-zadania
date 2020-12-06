@@ -266,3 +266,24 @@ buttonCreate.addEventListener("click", () => {
 
     document.body.appendChild(wrapper);
 })
+
+//Zadanie 10
+function uppercaseFistLetter(value ) {
+    return value.charAt(0).toUpperCase() + value.slice(1)
+}
+
+
+const buttonUppercaseFirstLetter = document.createElement("button");
+buttonUppercaseFirstLetter.textContent = "uppercase 1 letter"
+document.body.appendChild(buttonUppercaseFirstLetter)
+
+buttonUppercaseFirstLetter.addEventListener("click", () => {
+    const inputs = document.querySelectorAll(".fieldValue");
+    
+    [...inputs].forEach((item) => {
+      console.log(item.innerHTML);
+        item.innerHTML = uppercaseFistLetter(item.innerHTML);
+      });
+    
+
+})
