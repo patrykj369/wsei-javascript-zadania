@@ -60,3 +60,57 @@ document.body.appendChild(div1);
 document.body.appendChild(span1);
 document.body.appendChild(div2);
 document.body.appendChild(span2);
+
+//Zadanie 7 
+const sampleArray = ["el1", "el2", "el3", "el4", "el5", "el6"];
+const list1 = document.createElement("ul");
+const list2 = document.createElement("ul");
+const button1 = document.createElement("button");
+const button2 = document.createElement("button");
+const buttonText = "move";
+
+
+
+sampleArray.forEach( item => {
+    const li = document.createElement("li");
+    li.innerText = item;
+    list1.appendChild(li);
+})
+
+document.body.appendChild(list1);
+document.body.appendChild(button1);
+button1.textContent = buttonText;
+
+button1.addEventListener("click", () => {
+    const lastItemList1 = list1.lastChild;
+    const lastItemList2 = list2.lastChild;
+
+    list2.insertBefore(lastItemList1, lastItemList2)
+
+    if(list1.children.length === 0){
+        button1.disabled = true;
+    }
+    else {
+        button2.disabled = false;
+    }
+
+})
+
+document.body.appendChild(list2);
+document.body.appendChild(button2);
+button2.textContent = buttonText;
+
+button2.addEventListener("click", () => {
+    const lastItemList1 = list1.lastChild;
+    const lastItemList2 = list2.lastChild;
+
+    list1.insertBefore(lastItemList2, lastItemList1)
+
+    if(list2.children.length === 0){
+        button2.disabled = true;
+    } 
+    else {
+        button1.disabled = false;
+    }
+
+})
