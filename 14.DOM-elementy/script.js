@@ -44,3 +44,9 @@ function calculateParameters(el) {
 }
 
 calculateParameters(dataSetCheck);
+
+//Zadanie 4
+document.querySelector("#spanText").innerText = "abc";
+
+//Zadanie 5
+document.querySelector("#spanText").className = "abc";
