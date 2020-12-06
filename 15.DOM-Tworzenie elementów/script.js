@@ -16,3 +16,19 @@ fruits.forEach( item => {
 })
 
 document.appendChild(ul);
+
+//Zadanie 3
+ul.addEventListener("click", () => {
+    ul.querySelectorAll("li:nth-of-type(odd)").forEach( item => {
+        item.remove();
+    })
+})
+
+//Zadanie 4
+const button = document.createElement("button");
+button.innerHTML = "delete";
+document.body.appendChild(button);
+
+button.addEventListener("click", e => {
+    e.target.remove();
+})
