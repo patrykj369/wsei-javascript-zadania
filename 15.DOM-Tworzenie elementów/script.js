@@ -149,3 +149,120 @@ button.addEventListener("click", e => {
         
     }
 })
+
+//Zadanie 9 
+const details = ["Imię", "Nazwisko", "Wiek", "Ilość dzieci"];
+const mainwrapper = document.createElement("div");
+
+
+//tworzenie buttonow
+const buttonMore = document.createElement("button");
+const buttonCreate = document.createElement("button");
+buttonMore.textContent = "Więcej";
+buttonCreate.textContent = "Utwórz";
+buttonMore.id = "more";
+buttonCreate.id = "create";
+
+//tworzenie tabli
+details.forEach( (item) => {
+    const wrapper = document.createElement("div");
+    const textDiv = document.createElement("div");
+    const input = document.createElement("input");
+    input.className = item;
+    const br = document.createElement("br");
+    textDiv.textContent = item;
+    wrapper.appendChild(textDiv);
+    wrapper.appendChild(input);
+    wrapper.appendChild(br);
+
+    mainwrapper.appendChild(wrapper)
+})
+
+document.body.appendChild(mainwrapper);
+document.body.appendChild(buttonMore);
+document.body.appendChild(buttonCreate);
+
+buttonMore.addEventListener("click", () => {
+    details.forEach( (item) => {
+        const wrapper = document.createElement("div");
+        const textDiv = document.createElement("div");
+        const input = document.createElement("input");
+        input.className = item;
+        const br = document.createElement("br");
+        textDiv.textContent = item;
+        wrapper.appendChild(textDiv);
+        wrapper.appendChild(input);
+        wrapper.appendChild(br);
+        mainwrapper.appendChild(wrapper)
+    })
+})
+
+function createButtonDelate(){
+    const button = document.createElement("button");
+    button.textContent ="Usuń";
+
+    button.addEventListener("click", (e) => {
+        const target = e.target;
+        target.parentNode.parentNode.removeChild(target.parentNode);
+    })
+
+    return button;
+}
+
+function createField(fieldName, text){
+    const buttonDelate = createButtonDelate();
+    const wrapper = document.createElement("div");
+    const fieldDiv = document.createElement("div");
+    const fieldValue = document.createElement("div");
+    fieldDiv.textContent = fieldName + ": ";
+    fieldValue.textContent = text;
+    fieldValue.classList = "fieldValue";
+    wrapper.appendChild(fieldDiv);
+    wrapper.appendChild(fieldValue);
+    wrapper.appendChild(buttonDelate);
+
+    
+
+    return wrapper;
+}
+
+buttonCreate.addEventListener("click", () => {
+    const name = document.querySelectorAll(".Imię");
+    const lastname = document.querySelectorAll(".Nazwisko");
+    const age = document.querySelectorAll(".Wiek");
+    const kids = document.querySelectorAll(".Ilość dzieci");
+
+    const wrapper = document.createElement("div");
+
+    for (let index = 0; index < name.length; index++) {
+        const fieldName = name[index].value;
+        
+        const element = createField("Imię", fieldName);
+        wrapper.appendChild(element);
+    }
+
+
+    for (let index = 0; index < lastname.length; index++) {
+        const fieldName = lastname[index].value;
+
+        const element = createField("Nazwisko", fieldName);
+        wrapper.appendChild(element);
+    }
+
+
+    for (let index = 0; index < age.length; index++) {
+        const fieldName = age[index].value;
+
+        const element = createField("Wiek", fieldName);
+        wrapper.appendChild(element);
+    }
+    
+    for (let index = 0; index < kids.length; index++) {
+        const fieldName = kids[index].value;
+
+        const element = createField("Ilość dzieci", fieldName);
+        wrapper.appendChild(element);
+    }
+
+    document.body.appendChild(wrapper);
+})
