@@ -287,3 +287,25 @@ buttonUppercaseFirstLetter.addEventListener("click", () => {
     
 
 })
+
+//Zadanie 11
+function findNumbersAndCreateDivs(text) {
+    const numbers = text.match(/[0-9]+/g);
+    
+    if (numbers.length > 0) {
+        const convertedNumbers = numbers.map(item => Number(item));
+        const sumNumbers = convertedNumbers.reduce( (x,y) => x + y )
+        console.log(sumNumbers);
+        const multipliedNumbers = convertedNumbers.reduce( (x,y) => x * y )
+
+        for (let i = 0; i < multipliedNumbers; i++) {
+            const div = document.createElement("div");
+            div.textContent = text;
+            document.body.appendChild(div);
+        }
+
+    }
+}
+
+findNumbersAndCreateDivs("aaa2sca2");
+
