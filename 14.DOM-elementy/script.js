@@ -25,3 +25,22 @@ function displayDetails(item) {
 }
 
 displayDetails(shortList);
+
+//Zadanie 3
+const dataSetCheck = document.getElementById("datasetCheck")
+
+function calculateParameters(el) {
+    const data = document.querySelector("#datasetCheck");
+    const elmentOne = Number(el.getAttribute("data-numberone"));
+    const elmentTwo = Number(el.getAttribute("data-numbertwo"));
+    const elmentThree = Number(el.getAttribute("data-number-three"));
+
+    const sum =  elmentOne + elmentTwo + elmentThree;
+    const diff = elmentOne - elmentTwo - elmentThree
+    
+
+    console.log("suma: " + sum )
+    console.log("roznica: " + diff)
+}
+
+calculateParameters(dataSetCheck)
