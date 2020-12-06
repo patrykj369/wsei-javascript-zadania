@@ -43,4 +43,4 @@ function calculateParameters(el) {
     console.log("roznica: " + diff)
 }
 
-calculateParameters(dataSetCheck)
+calculateParameters(dataSetCheck);
