@@ -43,3 +43,76 @@ ex3Divs.forEach((div) => {
         parentElement.style.backgroundColor = randomColor;
     })
 })
+
+//Zadanie 5
+const divs = document.querySelectorAll("#ex5 div");
+const listItems = document.querySelectorAll("#ex5 li");
+
+//5.1
+divs.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+        const colors = div.style.backgroundColor;
+        listItems[0].style.backgroundColor = colors;
+    })
+
+})
+
+//5.2
+divs.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+        const colors = div.style.backgroundColor;
+        listItems[listItems.length - 1].style.backgroundColor = colors;
+    })
+
+})
+
+//5.3
+divs.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+        const colors = div.style.backgroundColor;
+
+        for (let i = 0; i < listItems.length; i++) {
+            if(i % 2 !== 0){
+                listItems[i].style.backgroundColor = colors;
+            }
+            
+        }
+
+        
+    })
+
+})
+
+//5.4
+divs.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+        const colors = div.style.backgroundColor;
+        for (let i = 0; i < listItems.length; i++) {          
+                listItems[i].style.backgroundColor = colors;      
+        }     
+    })
+})
+
+
+//5.5
+divs.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+        const colors = div.style.backgroundColor;
+        div.parentElement.style.background = colors;
+    })
+
+})
+
+
+//Zadanie 6
+const mainElement = document.querySelector("#ex6");
+console.log(mainElement)
+
+//6.1
+const elementOne = mainElement.firstElementChild.firstElementChild.firstElementChild;
+
+//6.2
+const elementTwo = mainElement.firstElementChild.parentElement.firstElementChild.firstElementChild.nextSibling.parentElement;
+
+//6.3
+const elementThree = mainElement.parentElement.firstElementChild.parentElement.children[1].firstElementChild.firstElementChild.firstElementChild;
