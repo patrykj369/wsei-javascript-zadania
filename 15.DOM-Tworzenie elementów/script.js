@@ -114,3 +114,38 @@ button2.addEventListener("click", () => {
     }
 
 })
+//Zadanie 8
+const form = document.createElement("form");
+const input = document.createElement("input");
+const br1 = document.createElement("br");
+const span = document.createElement("span")
+const br2 = document.createElement('br');
+const button = document.createElement("button");
+
+const spantext = "element type, text color, how many elements"; 
+const buttonText = "Utwórz";
+
+form.appendChild(span);
+form.appendChild(br1);
+form.appendChild(input);
+form.appendChild(br2);
+form.appendChild(button);
+document.body.appendChild(form);
+
+span.textContent = spantext;
+button.textContent = buttonText;
+
+button.addEventListener("click", e => {
+    e.preventDefault();
+
+    const inputValue = input.value;
+    const elements = inputValue.split(' ');
+    console.log(elements)
+    for (let i = 0; i < elements[0]; i++) {
+        const element = document.createElement(elements[3]);
+        element.textContent = elements[1];
+        element.style.color = elements[2];
+        document.body.appendChild(element);
+        
+    }
+})
