@@ -50,3 +50,16 @@ document.querySelector("#spanText").innerText = "abc";
 
 //Zadanie 5
 document.querySelector("#spanText").className = "abc";
+
+//Zadanie 6
+const elements = document.querySelector("#classes").classList;
+
+function displayClasses(classes) {
+    classes.forEach((name) => {
+        console.log(name);
+
+    });
+    console.log(Array.from(classes.values()).join('+'));
+}
+
+displayClasses(elements);
