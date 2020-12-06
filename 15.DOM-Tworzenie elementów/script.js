@@ -309,3 +309,23 @@ function findNumbersAndCreateDivs(text) {
 
 findNumbersAndCreateDivs("aaa2sca2");
 
+//Zadanie 12 
+function createObject(input) {
+    return {
+        text: input
+    }
+}
+
+const obj1 = createObject("Zielone śledzie pływają w miodzie");
+obj1.checkFunction = function() {
+    if(this.text.includes("Ala")){
+        this.text = this.text.replaceAll("Ala", "Ola");
+        console.log(this.text);
+    } else {
+        const div = document.createElement("div");
+        div.textContent = "Słowo Ala nie występuje w tekście."
+        document.body.appendChild(div);
+    }
+}
+
+obj1.checkFunction();
