@@ -1,5 +1,5 @@
 //Zadanie 1
-console.log("Twoje imię");
+console.log("Moje imię");
 
 //Zadanie 2
 console.log(12+32);
